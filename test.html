@@ -40,12 +40,28 @@
             <div class="row justify-content-center">
                 <div class="col-lg-6 col-md-6 col-sm-12">
                     <div><textarea id="userInput" data-id="burger" rows="5"></textarea></div>
-                    <div id="devourBtnDiv" class="col-lg-4 col-md-4 col-sm-12">
+                    <div id="devourBtnDiv">
                         <button id="submitBtn">Submit</button>
                     </div>
                     <div id="bottomText"><p>Enter a burger you want to eat and click the submit button.</p></div>
                 </div>
             </div>
+
+            <form class="create-form">
+
+                <div class="form-group">
+                  <label for="ca">Cat Name:</label>
+                  <input type="text" id="ca" name="name">
+                </div>
+              
+                <div class="form-group">
+                  <label for="sleepy">Sleepy?</label><br>
+                  <input type="radio" name="sleepy" value="1" checked> Sleepy!<br>
+                  <input type="radio" name="sleepy" value="0"> Awake
+                </div>
+              
+                <button type="submit">Add Cat</button>
+              </form>
         </div>
 	</body>
 </html>

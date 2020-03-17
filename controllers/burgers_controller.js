@@ -20,14 +20,15 @@ router.get("/index", function(req, res) {
 });
 
 router.post("/index", function(req, res) {
-  /*cat.insertOne([
-    "name", "devour"
+  console.log("INSIDE ROUTER POST"); //FOR DEBUG
+  burger.insertOne([
+    "burger_name", "devoured"
   ], [
-    req.body.name, req.body.devour
+    req.body.burger_name, false
   ], function(result) {
     // Send back the ID of the new quote
-    //res.json({ id: result.insertId }); //NEED TO CHANGE
-  });*/
+    res.json(result); //NEED TO CHANGE
+  });
 });
 
 router.put("/index", function(req, res) {
