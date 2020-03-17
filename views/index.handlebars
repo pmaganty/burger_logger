@@ -11,20 +11,23 @@
             <div class="row justify-content-center">
                 <div class="col-lg-9 col-md-9 col-sm-12">
                     <div class="row justify-content-center">
-                        <div class="col-lg-4 col-md-4 col-sm-12">
-                            <div id="uneatenDiv">
-                                <!--UPDATE WITH DIVS FOR EACH NEW BURGER-->
-                                {{#each burgers}}
-                                    {{#unless devoured}}
-                                        <div class="uneatenBurger">{{burger_name}}</div>
-                                    {{/unless}}
-                                {{/each}}
-                            </div>
+                        <div class="col-lg-9 col-md-9 col-sm-12">
+                            {{#each burgers}}
+                                {{#unless devoured}}
+                                    <div class="row justify-content-center">
+                                        <div class="col-lg-6 col-md-6 col-sm-12">
+                                            <div id="uneatenDiv">
+                                                <div class="uneatenBurger" data-burger="{{burger_name}}">{{burger_name}}</div>
+                                            </div>
+                                        </div>
+                                        <div id="devourBtnDiv" class="col-lg-6 col-md-6 col-sm-12">
+                                            <button class="devourBtn" data-burger="{{burger_name}}">Devour it!</button>
+                                        </div>
+                                    </div>
+                                {{/unless}}
+                            {{/each}}
                         </div>
-                        <div id="devourBtnDiv" class="col-lg-4 col-md-4 col-sm-12">
-                            <button id="devourBtn">Devour it!</button>
-                        </div>
-                        <div class="col-lg-4 col-md-4 col-sm-12">
+                        <div class="col-lg-3 col-md-3 col-sm-12">
                             <div id="eatenDiv">
                                 <!--UPDATE WITH DIVS WHEN BURGER IS EATEN-->
                                 {{#each burgers}}

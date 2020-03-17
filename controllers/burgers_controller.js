@@ -27,17 +27,18 @@ router.post("/index", function(req, res) {
     req.body.burger_name, false
   ], function(result) {
     // Send back the ID of the new quote
-    res.json(result); //NEED TO CHANGE
+    res.json(result);
   });
 });
 
 router.put("/index", function(req, res) {
-  /*var condition = "id = " + req.params.id;
+  var condition = "burger_name = " + '"' + req.body.burger_name + '"';
+  console.log(condition); //FOR DEBUG
 
-  console.log("condition", condition);
+  //console.log("condition", condition);
 
-  cat.updateOne({
-    sleepy: req.body.sleepy
+  burger.updateOne({
+    devoured: true
   }, condition, function(result) {
     if (result.changedRows == 0) {
       // If no rows were changed, then the ID must not exist, so 404
@@ -45,7 +46,7 @@ router.put("/index", function(req, res) {
     } else {
       res.status(200).end();
     }
-  });*/
+  });
 });
 
 // Export routes for server.js to use.

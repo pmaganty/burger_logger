@@ -1,5 +1,1 @@
-
-INSERT INTO burgers (burger_name, devoured) VALUES ("McChicken", false);
-INSERT INTO burgers (burger_name, devoured) VALUES ("Chipotle Chicken", true);
-INSERT INTO burgers (burger_name, devoured) VALUES ("Hamburger", false);
-INSERT INTO burgers (burger_name, devoured) VALUES ("Mushroom", false);
+UPDATE burgers_db.burgers SET devoured=true WHERE burger_name=Mushroom

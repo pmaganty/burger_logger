@@ -11,27 +11,41 @@
 		<script src="https://code.jquery.com/jquery.js"></script>
 	</head>
 	<body>
-		<div class="container">
+        <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-4 col-md-4 col-sm-12">
-                    <div id="burgerDiv"><img src="./public/assets/img/burger.png" id="burgerPic" class="img-fluid" alt="..."></div>
+                    <div id="burgerDiv"><img src="/assets/img/burger.png" id="burgerPic" class="img-fluid" alt="..."></div>
                     <h2 id="eatDaBurger">Eat-Da-Burger!</h2>
+                    <script src="/assets/js/burgers.js"></script>
                 </div>
             </div>
             <div class="row justify-content-center">
                 <div class="col-lg-12 col-md-12 col-sm-12">
                     <div class="row justify-content-center">
-                        <div class="col-lg-4 col-md-4 col-sm-12">
-                            <div id="uneatenDiv">
-                                <!--UPDATE WITH DIVS FOR EACH NEW BURGER-->
-                            </div>
-                        </div>
-                        <div id="devourBtnDiv" class="col-lg-4 col-md-4 col-sm-12">
-                            <button id="devourBtn">Devour it!</button>
-                        </div>
-                        <div class="col-lg-4 col-md-4 col-sm-12">
-                            <div id="eatenDiv">
-                                <!--UPDATE WITH DIVS WHEN BURGER IS EATEN-->
+                        <div class="col-lg-9 col-md-9 col-sm-12">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-9 col-md-9 col-sm-12">
+
+                                            <div class="row justify-content-center">
+                                                <div class="col-lg-6 col-md-6 col-sm-12">
+                                                    <div id="uneatenDiv">
+                                                        <div class="uneatenBurger" data-burger="{{burger_name}}">{{burger_name}}</div>
+                                                    </div>
+                                                </div>
+                                                <div id="devourBtnDiv" class="col-lg-6 col-md-6 col-sm-12">
+                                                    <button id="devourBtn">Devour it!</button>
+                                                </div>
+                                            </div>
+
+                                </div>
+                                <div class="col-lg-3 col-md-3 col-sm-12">
+                                    <div id="eatenDiv">
+                                        <!--UPDATE WITH DIVS WHEN BURGER IS EATEN-->
+
+                                                <div class="uneatenBurger">{{burger_name}}</div>
+
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -46,22 +60,8 @@
                     <div id="bottomText"><p>Enter a burger you want to eat and click the submit button.</p></div>
                 </div>
             </div>
-
-            <form class="create-form">
-
-                <div class="form-group">
-                  <label for="ca">Cat Name:</label>
-                  <input type="text" id="ca" name="name">
-                </div>
-              
-                <div class="form-group">
-                  <label for="sleepy">Sleepy?</label><br>
-                  <input type="radio" name="sleepy" value="1" checked> Sleepy!<br>
-                  <input type="radio" name="sleepy" value="0"> Awake
-                </div>
-              
-                <button type="submit">Add Cat</button>
-              </form>
+        
+        
         </div>
 	</body>
 </html>

@@ -8,3 +8,5 @@ CREATE TABLE burgers
 	devoured BOOLEAN NOT NULL,
 	PRIMARY KEY (id)
 );
+
+UPDATE burgers SET devoured=true WHERE burger_name = Mushroom

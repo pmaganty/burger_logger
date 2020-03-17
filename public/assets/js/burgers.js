@@ -1,25 +1,30 @@
 // Make sure we wait to attach our handlers until the DOM is fully loaded.
 $(function() {
-    /*$(".change-sleep").on("click", function(event) {
-      var id = $(this).data("id");
-      var newSleep = $(this).data("newsleep");
+    $(".devourBtn").on("click", function(event) {
+      console.log("IN CLASS CLICK FUNCTION"); //FOR DEBUG
+      var burger = $(this).data("burger");
+      console.log(burger); //FOR DEBUG
+      //var newSleep = $(this).data("newsleep");
   
-      var newSleepState = {
-        sleepy: newSleep
+      var newEatState = {
+        burger_name: burger
       };
+
+      //console.log($this); //FOR DEBUG
+      //$(this).data('burger').remove();
   
       // Send the PUT request.
-      $.ajax("/api/cats/" + id, {
+      $.ajax("/index", {
         type: "PUT",
-        data: newSleepState
+        data: newEatState
       }).then(
         function() {
-          console.log("changed sleep to", newSleep);
+          //console.log("changed sleep to", newSleep);
           // Reload the page to get the updated list
           location.reload();
         }
       );
-    });*/
+    });
   
     $("#submitBtn").on("click", function(event) {
       // Make sure to preventDefault on a submit event.
