@@ -14,7 +14,7 @@ $(function() {
       //$(this).data('burger').remove();
   
       // Send the PUT request.
-      $.ajax("/index", {
+      $.ajax("/", {
         type: "PUT",
         data: newEatState
       }).then(
@@ -39,7 +39,7 @@ $(function() {
       console.log(newBurger.burger_name); //FOR DEBUG
   
       // Send the POST request.
-      $.ajax("/index", {
+      $.ajax("/", {
         type: "POST",
         data: newBurger
       }).then(
