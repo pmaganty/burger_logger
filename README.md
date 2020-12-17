@@ -2,7 +2,7 @@
 ## Author: Pranitha Maganty
 ### Description: Allows user to add and devour burgers in a fun GUI
 ### Github Repo Link: https://github.com/pmaganty/burger_logger
-### Heroku Link: https://immense-bastion-87369.herokuapp.com/index
+### Heroku Link: https://immense-bastion-87369.herokuapp.com/index [NO LONGER SUPPORTED]
 
 #### Preliminary to-do:
 + Enter "npm i" to grab all dependency libraries
@@ -12,6 +12,8 @@
 + Run the server.js file using "node server.js" inside the same directory hierarchy that it exists OR simply go to Heroku link provided
 + Enter burger of choice into test box and hit submit - burger with devour button will populat on left side
 + Click "devour" button next to burger to move to right side to indicate burger has been eaten
+
+![MainPage](public/assets/img/MainPage.PNG)
 
 #### File Contents:
 + server.js: contains info to connect to server
